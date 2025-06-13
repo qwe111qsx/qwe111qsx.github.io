@@ -1,5 +1,125 @@
-<html>
-  <body>
-    <h1>欢迎来到我的个人主页</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    }
+
+    .app-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .app-description {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .download-btn {
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+    }
+
+    .screenshots {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .screenshot-placeholder {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .screenshot-placeholder::before {
+      content: "Screenshot area";
+      color: #666;
+    }
+
+    .android-icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <div class="container">
+      <h1 class="app-title">Hangar</h1>
+      <p class="app-description">Hangar is a platform for managing your vehicles and parts.</p>
+      <a href="#" class="download-btn">
+        <svg class="android-icon" viewBox="0 0 24 24">
+          <path
+            d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.71 12 7.71c-1.8533 0-3.5902.5339-5.1377 1.4497L4.84 5.6573a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396" />
+        </svg>
+        Download Android
+      </a>
+      <div class="screenshots">
+        <div class="screenshot-placeholder"></div>
+        <div class="screenshot-placeholder"></div>
+        <div class="screenshot-placeholder"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
